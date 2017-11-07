@@ -1,3 +1,5 @@
+Fork from https://github.com/ldn0x7dc/react-native-transformable-image
+
 # react-native-transformable-image
 
 A pure JavaScript written transformable image component, like PhotoView or ImageViewer, supports gestures like pan, pinch, double tab and fling, works with both iOS and Android.
@@ -10,7 +12,7 @@ Written in pure JS, this component should be one of the most easy to use compone
 
 ## Install
 
- `npm install --save react-native-transformable-image@latest`
+ `npm install --save react-native-transformable-image-next@latest`
 
 
 
@@ -19,7 +21,7 @@ Written in pure JS, this component should be one of the most easy to use compone
 Quite same as the official **[Image](https://facebook.github.io/react-native/docs/image.html)**, as below shows:
 
 ```
-import Image from 'react-native-transformable-image';
+import Image from 'react-native-transformable-image-next';
 ...
 render() {
     return (
