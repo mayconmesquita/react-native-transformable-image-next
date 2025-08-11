@@ -37,6 +37,8 @@ export default class TransformableImage extends Component {
   constructor(props) {
     super(props);
 
+    this.viewTransformerRef = React.createRef();
+
     this.state = {
       width: 0,
       height: 0,
@@ -87,7 +89,7 @@ export default class TransformableImage extends Component {
 
     return (
       <ViewTransformer
-        ref='viewTransformer'
+        ref={this.viewTransformerRef}
         key={'viewTransformer#' + this.state.keyAccumulator} //when image source changes, we should use a different node to avoid reusing previous transform state
         enableTransform={this.props.enableTransform && this.state.imageLoaded} //disable transform until image is loaded
         enableScale={this.props.enableScale}
@@ -167,7 +169,7 @@ export default class TransformableImage extends Component {
   }
 
   getViewTransformerInstance() {
-    return this.refs['viewTransformer'];
+    return this.viewTransformerRef.current;
   }
 }
 
